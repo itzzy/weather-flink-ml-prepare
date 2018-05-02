@@ -47,7 +47,7 @@ object Job {
     val parsedSource = source.map(_.extract[Weather])
 
     parsedSource.keyBy(x => x.iterationTime).timeWindow(Time.minutes(5))
-    parsedSource.keyBy(1).t
+    //parsedSource.keyBy(1).t
 
     env.execute("Kafka 0.10 Example")
 
